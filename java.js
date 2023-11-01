@@ -4,7 +4,8 @@ function calcularEmprestimo() {
     var valorEmprestimo = parseFloat(document.getElementById("valorEmprestimo").value);
     var numeroParcelas = parseInt(document.getElementById("numeroParcelas").value);
 
-    var valorParcela = valorEmprestimo / numeroParcelas;
+    var montante = valorEmprestimo * Math.pow((1 + 0.1), numeroParcelas);
+    var valorParcela = montante / numeroParcelas;
         var resultado = document.getElementById("resultado");
         resultado.innerHTML = ""; // Limpa o conteúdo anterior
 
